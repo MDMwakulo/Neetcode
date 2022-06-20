@@ -1,5 +1,5 @@
 //Approach 1
-/*Time Complexity and Space Complexity Unknown
+/*Time Complexity and Space Complexity Unknown*/
 var TwoSum = function (nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = (i + 1); j < nums.length; j++) {
@@ -13,7 +13,8 @@ var TwoSum = function (nums, target) {
 var tar = 17;
 var arr = [1, 3, 7, 9, 22, -5]
 TwoSum(arr, tar)
-*/
+
+
 //Approach 2. 
 /*Runtime: 48 ms, faster than 98.37% of JavaScript online submissions for Two Sum.
 Memory Usage: 34 MB, less than 96.69% of JavaScript online submissions for Two Sum.*/
