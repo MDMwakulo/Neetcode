@@ -63,3 +63,21 @@ but this would require extra non-constant space for creating the string which is
 */
 
 
+/*Another attempt that converts the number into a string, which we want to avoid according to Follow-Up section
+of the problem. 
+var PalindromeNumber= function (x){
+    let reversed= x.toString().split('').reverse().join('')
+    return (x.toString()===reversed)
+}
+*/
+
+/*Another attempt that converts the number into a string, which we want to avoid according to Follow-Up section
+of the problem. 
+var PalindromeNumber= function (x) {
+    let reversedStr= "";
+    let xStr= x.toString()
+    for (let i of xStr){
+        reversedStr = i+ reversedStr 
+    }
+    return (reversedStr === xStr)
+}*/
