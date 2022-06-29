@@ -1,3 +1,5 @@
+
+
 //Approach 1
 var mostCommonWord = function(paragraph, banned) {
     var myObj= {};
