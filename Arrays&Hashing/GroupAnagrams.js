@@ -1,6 +1,6 @@
 
 
-//Approach 1 
+//Approach 1: Using Objects
 var groupAnagrams = function(strs) {
     let obj = {};
     for (let str of strs) {
@@ -9,14 +9,13 @@ var groupAnagrams = function(strs) {
     }
     return Object.values(obj);
 };
+groupAnagrams(["eat","tea","tan","ate","nat","bat"])
 /*The Time Complexity of Approach 1 is O(n*klog(k)), where n is the length of input array and k is the maximum length of a string in input array */
 /*The Space Complexity of Approach 1 is O(n) */
 
 
-
-
-//Approach 2
-var groupAnagrams = function(strs) {
+//Approach 2: Using Map
+var groupAnagramsTwo = function(strs) {
     let m = new Map();
     for (let str of strs) {
         let sorted = str.split("").sort().join("");
@@ -25,12 +24,13 @@ var groupAnagrams = function(strs) {
     }
     return Array.from(m.values());
 };
+groupAnagramsTwo(["eat","tea","tan","ate","nat","bat"])
 /*The Time Complexity of Approach 2 is O(n*klog(k)) , where n is the length of input array and k is the maximum length of a string in input array */
 /*The Space Complexity of Approach 2 is O(n) */
 
 
-//Approach 3
-var groupAnagrams = function(strs) {
+//Approach 3: No Map, Object or Set
+var groupAnagramsThree = function(strs) {
     let res = {};
     for (let str of strs) {
         let count = new Array(26).fill(0);
@@ -40,6 +40,7 @@ var groupAnagrams = function(strs) {
     }
     return Object.values(res);
 };
+groupAnagramsThree(["eat","tea","tan","ate","nat","bat"])
 /* Time Complexity: O(n*k) where n is the size of input array and k is the maximum length of string in input array
 /* Space Complexity: O(n)
 
@@ -66,8 +67,6 @@ console.log(values)
 for(var entry of values){newArray.push(entry)}
 return newArray;
 };
-
-
 groupAnagrams(["eat","tea","tan","ate","nat","bat"])
-/*The Time Complexity of Approach 1 is ? */
-/*The Space Complexity of Approach 1 is ? */
+/*The Time Complexity of this approach is ? */
+/*The Space Complexity of this approach is ? */
